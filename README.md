@@ -6,7 +6,7 @@ This repo contains some simplest case examples on Vuex for learning purpose. I a
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -29,6 +29,11 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 * [x] Vuex allows us to manage our app state within Vue JS very easily.
 * [x] Also, created a simple vue template using vue-cli.
 
-### Day 2: 20 Dec 2017
+### Day 2: 21 Dec 2017
+
+* [x] Created a simple vue app and passing data to child components using `props`.
+* [x] This app will be used to experiment with Vuex.
+
+### Day 3: 22 Dec 2017
 
 * [ ] TODO
