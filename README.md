@@ -34,6 +34,16 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 * [x] Created a simple vue app and passing data to child components using `props`.
 * [x] This app will be used to experiment with Vuex.
 
-### Day 3: 22 Dec 2017
+### Day 3: 23 Dec 2017
+
+* [x] Installed `vuex` to this project.
+
+```bash
+npm install vuex --save
+```
+
+* [x] Worked on setting up a central store using `vuex`.
+
+### Day 3: 25 Dec 2017
 
 * [ ] TODO
