@@ -8,6 +8,8 @@ Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
+	// provide the store using the "store" option.
+	// this will inject the store instance to all child components.
 	store,
 	render: h => h(App)
 });

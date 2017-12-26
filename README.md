@@ -44,6 +44,15 @@ npm install vuex --save
 
 * [x] Worked on setting up a central store using `vuex`.
 
-### Day 3: 25 Dec 2017
+### Day 4: 26 Dec 2017
+
+* [x] Learned how we can access central `vuex` [store][vuex-state] in our child components without using any `props`.
+* [x] By providing the `store` option to the root instance, the store will be injected into all child components of the root and will be available on them as `this.$store`.
+
+### Day 5: 27 Dec 2017
 
 * [ ] TODO
+
+<!-- All links are added here -->
+
+[vuex-state]: https://vuex.vuejs.org/en/state.html
