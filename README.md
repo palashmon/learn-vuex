@@ -38,9 +38,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 * [x] Installed `vuex` to this project.
 
-```bash
-npm install vuex --save
-```
+  ```bash
+  npm install vuex --save
+  ```
 
 * [x] Worked on setting up a central store using `vuex`.
 
@@ -49,10 +49,35 @@ npm install vuex --save
 * [x] Learned how we can access central `vuex` [store][vuex-state] in our child components without using any `props`.
 * [x] By providing the `store` option to the root instance, the store will be injected into all child components of the root and will be available on them as `this.$store`.
 
-### Day 5: 27 Dec 2017
+### Day 5: 28 Dec 2017
+
+* [x] Learned about use-cases for [getters][getters] in `vuex`.
+* [x] If more than one component needs to make use of a computed property based on store state, we can put that as "getters" in the store. It acts like a computed property for store.
+* [x] Getters receives the state as their 1st argument.
+
+  ```js
+  const store = new Vuex.Store({
+  	state: {
+  		todos: [{ id: 1, text: '...', done: true }, { id: 2, text: '...', done: false }]
+  	},
+  	getters: {
+  		doneTodos: state => {
+  			return state.todos.filter(todo => todo.done);
+  		}
+  	}
+  });
+  ```
+
+* [x] The getters are exposed on the `store.getters` object:
+  ```js
+  this.$store.getters.doneTodos; // -> [{ id: 1, text: '...', done: true }]
+  ```
+
+### Day 6: 29 Dec 2017
 
 * [ ] TODO
 
 <!-- All links are added here -->
 
 [vuex-state]: https://vuex.vuejs.org/en/state.html
+[getters]: https://vuex.vuejs.org/en/getters.html
