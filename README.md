@@ -73,7 +73,14 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
   this.$store.getters.doneTodos; // -> [{ id: 1, text: '...', done: true }]
   ```
 
-### Day 6: 29 Dec 2017
+### Day 6: 02 Jan 2018
+
+* [x] Learned about [mutations][mutations] in `vuex`.
+* [x] Used mainly for direct modification of state in `vuex`.
+* [x] Mutations must be synchronous and shouldn't return a value.
+* [x] They can be used directly by running `this.$store.commit('mutationName', payload)`.
+
+### Day 7: 29 Dec 2017
 
 * [ ] TODO
 
@@ -81,3 +88,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 [vuex-state]: https://vuex.vuejs.org/en/state.html
 [getters]: https://vuex.vuejs.org/en/getters.html
+[mutations]: https://vuex.vuejs.org/en/mutations.html
