@@ -2,11 +2,12 @@
     <div id="product-list-one">
         <h2>Product List One</h2>
         <ul>
-            <li v-for="product in saleProducts" :key="product">
+            <li v-for="product in saleProducts" :key="product.name">
                 <span class="name">{{ product.name }}</span>
                 <span class="price">£{{ product.price }}</span>
             </li>
         </ul>
+        <button @click="reducePrice">Reduce Price</button>
     </div>
 </template>
 
@@ -16,11 +17,16 @@ export default {
         return {};
     },
     computed: {
-        products(){
-            return this.$store.state.products
+        products() {
+            return this.$store.state.products;
         },
-        saleProducts(){
-            return this.$store.getters.saleProducts
+        saleProducts() {
+            return this.$store.getters.saleProducts;
+        }
+    },
+    methods: {
+        reducePrice() {
+            this.$store.commit('reducePrice');
         }
     }
 };
@@ -47,7 +53,7 @@ export default {
     border-radius: 4px;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
-#product-list-one li:hover  {
+#product-list-one li:hover {
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
 }
 .price {
