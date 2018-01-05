@@ -80,7 +80,13 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 * [x] Mutations must be synchronous and shouldn't return a value.
 * [x] They can be used directly by running `this.$store.commit('mutationName', payload)`.
 
-### Day 7: 29 Dec 2017
+### Day 7: 05 Jan 2018
+
+* [x] Learned about [actions][actions] in `vuex`.
+* [x] The most obvious use of `actions` is for performing asynchronous operations, where a `mutation` is called after the operation completes.
+* [x] Note that mutations themselves cannot be asynchronous.
+
+### Day 9: 06 jan 2018
 
 * [ ] TODO
 
@@ -89,3 +95,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 [vuex-state]: https://vuex.vuejs.org/en/state.html
 [getters]: https://vuex.vuejs.org/en/getters.html
 [mutations]: https://vuex.vuejs.org/en/mutations.html
+[actions]: https://vuex.vuejs.org/en/actions.html
