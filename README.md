@@ -86,9 +86,29 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 * [x] The most obvious use of `actions` is for performing asynchronous operations, where a `mutation` is called after the operation completes.
 * [x] Note that mutations themselves cannot be asynchronous.
 
-### Day 9: 06 jan 2018
+### Day 8: 08 jan 2018
 
-* [ ] TODO
+* [x] Today learned about mapping actions & getters using `mapGetters` & `mapActions` helpers.
+* [x] The `mapGetters` helper simply maps store getters to local computed properties.
+* [x] We can dispatch actions in components with `this.$store.dispatch('xxx')`, or use the `mapActions` helper which maps component methods to `store.dispatch` calls (requires root store injection).
+  ```js
+  import { mapActions } from 'vuex'
+
+  export default {
+    // ...
+    methods: {
+      ...mapActions([
+        'increment', // map `this.increment()` to `this.$store.dispatch('increment')`
+
+        // `mapActions` also supports payloads:
+        'incrementBy' // map `this.incrementBy(amount)` to `this.$store.dispatch('incrementBy', amount)`
+      ]),
+      ...mapActions({
+        add: 'increment' // map `this.add()` to `this.$store.dispatch('increment')`
+      })
+    }
+  }
+  ```
 
 <!-- All links are added here -->
 
