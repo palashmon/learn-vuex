@@ -7,11 +7,13 @@
                 <span class="price">£{{ product.price }}</span>
             </li>
         </ul>
-        <button @click="reducePrice(1)">Reduce Price</button>
+        <button @click="reducePrice(4)">Reduce Price</button>
     </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+
 export default {
     data() {
         return {};
@@ -20,14 +22,14 @@ export default {
         products() {
             return this.$store.state.products;
         },
-        saleProducts() {
-            return this.$store.getters.saleProducts;
-        }
+        // mix the getters into computed with object spread operator
+        ...mapGetters(['saleProducts'])
     },
     methods: {
-        reducePrice(amount) {
-            this.$store.dispatch('reducePrice', amount);
-        }
+        ...mapActions([
+            // Mounts the "reducePrice" action to `this.reducePrice()`.
+            'reducePrice'
+        ])
     }
 };
 </script>
